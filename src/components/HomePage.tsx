@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, ArrowRight, Sparkles, Target, Users, BookOpen, Play, Lightbulb, Zap, Database, Calendar, Hash, Globe, Cpu, FileText, AlertTriangle, Settings, Layers, Terminal, Server, Shield, FolderOpen, Network, HardDrive, Monitor, Command } from 'lucide-react';
+import { Code2, ArrowRight, Sparkles, Target, Users, BookOpen, Play, Lightbulb, Zap, Database, Calendar, Hash, Globe, Cpu, FileText, AlertTriangle, Settings, Layers, Terminal, Server, Shield, FolderOpen, Network, HardDrive, Monitor, Command, Menu, X } from 'lucide-react';
 
 interface HomePageProps {
   onNavigateToVariables: () => void;
@@ -11,6 +11,14 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ onNavigateToVariables, onNavigateToConditionals, onNavigateToLoops, onNavigateToFunctions, onNavigateToReturn, onNavigateToLinuxFileSystem }) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    { label: 'About Us', href: '#about' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'Contact Us', href: '#contact' }
+  ];
+
   const javascriptModules = [
     {
       title: "Core Language Keywords",
@@ -259,6 +267,67 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigateToVariables, onNavigateTo
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200 shadow-sm">
+        <div className="container mx-auto px-4 py-6 max-w-7xl">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3 cursor-pointer group">
+              <div className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors duration-200">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">zoxoj</h1>
+                <p className="text-sm text-gray-600 flex items-center mt-1">
+                  <BookOpen className="w-4 h-4 mr-1" />
+                  Programming & Linux Learning Platform
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-6">
+              {/* Desktop Menu */}
+              <nav className="hidden md:flex items-center space-x-6">
+                {menuItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+              
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+              >
+                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
+          </div>
+          
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 py-4 border-t border-gray-200">
+              <nav className="flex flex-col space-y-3">
+                {menuItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+        </div>
+      </header>
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10"></div>
