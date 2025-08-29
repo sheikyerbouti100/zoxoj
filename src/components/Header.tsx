@@ -83,7 +83,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigateHome }) => {
             </nav>
           </div>
         )}
-        </div>
       </div>
     </header>
   );
