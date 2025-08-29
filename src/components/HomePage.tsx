@@ -583,7 +583,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigateToVariables, onNavigateTo
             
             <div className="flex items-center space-x-6">
               <a
-                href="https://github.com/yourusername/programming-commands-methods"
+                href="https://github.com/stackblitz/bolt.new"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200"
