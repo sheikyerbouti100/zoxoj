@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, ArrowRight, Sparkles, Target, Users, BookOpen, Play, Lightbulb, Zap, Database, Calendar, Hash, Globe, Cpu, FileText, AlertTriangle, Settings, Layers, Terminal, Server, Shield, FolderOpen, Network, HardDrive, Monitor, Command, Menu, X } from 'lucide-react';
+import { Code2, ArrowRight, Sparkles, Target, Users, BookOpen, Play, Lightbulb, Zap, Database, Calendar, Hash, Globe, Cpu, FileText, AlertTriangle, Settings, Layers, Terminal, Server, Shield, FolderOpen, Network, HardDrive, Monitor, Command, Menu, X, CheckCircle, Star, Mail, Phone, MapPin, MessageCircle, Award, Clock, DollarSign } from 'lucide-react';
 
 interface HomePageProps {
   onNavigateToVariables: () => void;
@@ -586,6 +586,380 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigateToVariables, onNavigateTo
           </div>
         </div>
       </div>
+
+      {/* About Us Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About zoxoj</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We're passionate about making programming and system administration accessible to everyone through interactive, hands-on learning.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Traditional programming education often lacks practical, interactive elements. We believe learning should be engaging, 
+                immediate, and directly applicable. That's why we created zoxoj - a platform where you can learn by doing, 
+                not just reading.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Interactive code examples you can modify and run</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Real terminal simulation for Linux command practice</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Comprehensive coverage from basics to advanced topics</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center p-6 bg-blue-50 rounded-xl">
+                <div className="text-3xl font-bold text-blue-600 mb-2">50K+</div>
+                <div className="text-gray-600">Lines of Code Practiced</div>
+              </div>
+              <div className="text-center p-6 bg-green-50 rounded-xl">
+                <div className="text-3xl font-bold text-green-600 mb-2">1000+</div>
+                <div className="text-gray-600">Commands Mastered</div>
+              </div>
+              <div className="text-center p-6 bg-purple-50 rounded-xl">
+                <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+                <div className="text-gray-600">Available Learning</div>
+              </div>
+              <div className="text-center p-6 bg-orange-50 rounded-xl">
+                <div className="text-3xl font-bold text-orange-600 mb-2">100%</div>
+                <div className="text-gray-600">Free Forever</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose zoxoj?</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-6">
+                <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl mb-4 mx-auto">
+                  <Play className="w-6 h-6 text-blue-600" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Learn by Doing</h4>
+                <p className="text-gray-600">
+                  Every concept includes interactive examples you can modify, run, and experiment with in real-time.
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-xl mb-4 mx-auto">
+                  <Target className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Practical Focus</h4>
+                <p className="text-gray-600">
+                  Learn skills you'll actually use in real development and system administration scenarios.
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-xl mb-4 mx-auto">
+                  <Zap className="w-6 h-6 text-purple-600" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Instant Feedback</h4>
+                <p className="text-gray-600">
+                  See results immediately as you learn, with detailed explanations and error handling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We believe quality education should be accessible to everyone. That's why zoxoj is completely free, forever.
+            </p>
+          </div>
+          
+          <div className="max-w-lg mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-center">
+                <h3 className="text-2xl font-bold text-white mb-2">Free Forever</h3>
+                <div className="text-4xl font-bold text-white mb-2">$0</div>
+                <p className="text-blue-100">No hidden fees, no subscriptions</p>
+              </div>
+              
+              <div className="p-8">
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Complete JavaScript command reference</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Interactive Linux terminal simulator</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Live code editor with instant execution</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Comprehensive examples and explanations</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Mobile-responsive design</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Regular updates and new content</span>
+                  </li>
+                </ul>
+                
+                <button
+                  onClick={onNavigateToVariables}
+                  className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  <span>Start Learning Now</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              <strong>Why is it free?</strong> We believe in democratizing education and helping developers grow their skills 
+              without financial barriers. Our platform is supported by the community and built with love for learning.
+            </p>
+            <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
+              <div className="flex items-center space-x-2">
+                <Shield className="w-4 h-4" />
+                <span>No Ads</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="w-4 h-4" />
+                <span>Community Driven</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <BookOpen className="w-4 h-4" />
+                <span>Open Source</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600">
+              Everything you need to know about learning with zoxoj
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What programming concepts does zoxoj cover?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                zoxoj covers essential JavaScript programming concepts including variable declarations (var, let, const), 
+                control flow (if/else statements), loops (for, while, do-while), functions, and the return statement. 
+                We also provide comprehensive Linux terminal command training with 20+ essential commands.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Do I need any prior programming experience?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                No! zoxoj is designed for complete beginners. We start with the fundamentals and build up gradually. 
+                Each concept includes detailed explanations, interactive examples, and practical exercises that you can 
+                modify and experiment with.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">How does the interactive learning work?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Every code example on zoxoj includes a live editor where you can modify the code and see results instantly. 
+                Our Linux section features a realistic terminal simulator where you can practice commands safely. 
+                No setup required - everything runs directly in your browser.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Is zoxoj really free forever?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Yes! We're committed to keeping zoxoj completely free. We believe quality programming education should be 
+                accessible to everyone, regardless of their financial situation. There are no hidden fees, premium tiers, 
+                or subscription plans.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Can I use zoxoj on mobile devices?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Absolutely! zoxoj is fully responsive and works great on tablets and smartphones. The code editors and 
+                terminal simulators are optimized for touch interfaces, making it easy to learn programming on the go.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Will you add more programming languages?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We're constantly expanding our content! While we currently focus on JavaScript and Linux commands, 
+                we're planning to add Python, HTML/CSS, Git commands, and more advanced JavaScript topics. 
+                Follow our updates to be notified when new content is available.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Have questions, suggestions, or feedback? We'd love to hear from you and help improve your learning experience.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl">
+                    <Mail className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email Support</h4>
+                    <p className="text-gray-600">hello@zoxoj.com</p>
+                    <p className="text-sm text-gray-500">We typically respond within 24 hours</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-xl">
+                    <MessageCircle className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Community Support</h4>
+                    <p className="text-gray-600">Join our Discord community</p>
+                    <p className="text-sm text-gray-500">Get help from other learners and mentors</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-xl">
+                    <Clock className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Support Hours</h4>
+                    <p className="text-gray-600">Monday - Friday, 9 AM - 6 PM EST</p>
+                    <p className="text-sm text-gray-500">Community support available 24/7</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-6 bg-white rounded-xl border border-gray-200">
+                <h4 className="font-bold text-gray-900 mb-3">Quick Links</h4>
+                <div className="space-y-2">
+                  <button
+                    onClick={onNavigateToVariables}
+                    className="block w-full text-left px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                  >
+                    Start Learning JavaScript →
+                  </button>
+                  <button
+                    onClick={onNavigateToLinuxFileSystem}
+                    className="block w-full text-left px-4 py-2 text-green-600 hover:bg-green-50 rounded-lg transition-colors duration-200"
+                  >
+                    Start Learning Linux →
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+              
+              <form className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Subject
+                  </label>
+                  <select
+                    id="subject"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  >
+                    <option value="">Select a topic</option>
+                    <option value="general">General Question</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="content">Content Suggestion</option>
+                    <option value="bug">Bug Report</option>
+                    <option value="partnership">Partnership Inquiry</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600">
